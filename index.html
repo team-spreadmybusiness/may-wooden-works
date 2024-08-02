@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooden-Works-Furniture</title>
+    <!-- Google-fonts = "Poppins" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fontawesome 6.5.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Owl-carousel 2.3.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Alpine JS 3.14.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.js"></script>
+    <!-- Custom -->
+    <link rel="stylesheet" href="assets/css/output.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="container mx-auto flex flex-col lg:flex-row justify-around lg:items-center relative" x-data="{ showSidebar: false }">
+        <div class="flex items-center justify-between w-full lg:w-auto relative">
+            <a href="#" id="logo" class="flex items-center justify-between text-xl md:text-3xl font-extrabold text-primary">
+                <img src="assets/images/logo.svg" alt="Shiva Furnitures Logo" class="h-[50px] w-[50px] md:h-[90px] md:w-[75px]">
+                Shiva Furnitures
+            </a>
+            <button class="lg:hidden block text-gray-900 ml-4" @click="showSidebar = !showSidebar" aria-label="Toggle sidebar">
+                <img src="assets/images/5036960.png" alt="" class="w-6">
+            </button>
+        </div>
+        <ul class="hidden lg:block text-black lg:flex lg:space-x-16 lg:items-center tracking-wider text-sm font-medium uppercase">
+            <li><a href="#" class="transition-all duration-500 hover:text-primary">Home</a></li>
+            <li><a href="#" class="transition-all duration-500 hover:text-primary">About Us</a></li>
+            <li><a href="#" class="transition-all duration-500 hover:text-primary">Our Services</a></li>
+            <li><a href="#" class="transition-all duration-500 hover:text-primary">Our Portfolio</a></li>
+            <li>
+                <a href="#" class="inline-block px-7 py-4 bg-primary text-xs text-white font-bold transition-all duration-500 hover:bg-accent hover:text-[#F5F5DC]">Contact Us</a>
+            </li>
+        </ul>
+        <div :class="{ 'translate-x-0': showSidebar, '-translate-x-full': !showSidebar }" 
+             class="fixed inset-y-0 left-0 w-64 bg-black text-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 lg:hidden">
+            <div class="p-4">
+                <button @click="showSidebar = false" class="text-white">
+                    <i class="fas fa-times fa-lg"></i>
+                </button>
+            </div>
+            <ul class="mt-5 tracking-wider space-y-4 text-sm font-medium uppercase">
+                <li><a href="#" class="block px-4 py-2 text-gray-200">Home</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-200">About Us</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-200">Our Services</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-200">Our Portfolio</a></li>
+                <li><a href="#" class="block px-4 py-2 bg-primary text-white hover:bg-accent">Contact Us Now</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- banner -->
+    <section class="h-[50vh] md:h-[75vh] lg:h-[100vh] relative after:absolute after:inset-0 after:bg-black/50 z-0" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/olive-green-07-1508175904.jpg');background-size: cover;background-position: center;background-repeat: no-repeat;background-attachment: fixed;">
+        <div class="container mx-auto text-white border">
+            <div class="absolute z-10 top-1/2 -translate-y-1/2">
+                <h1 class="text-xl md:text-4xl lg:text-6xl font-extrabold tracking-wide">SHIVA WOODEN WORKS & FURNITURES</h1>
+                <div class="flex gap-5 md:gap-10 mt-2">
+                    <p class="text-sm md:text-lg font-bold uppercase text-gray-300 before:border-l-4 before:me-2 before:border-primary">furnitures</p>
+                    <p class="text-sm md:text-lg font-bold uppercase text-gray-300 before:border-l-4 before:me-2 before:border-primary">carpenters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+     <!-- services -->
+     <section class="my-10">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold uppercase before:border-l-4 before:me-4 before:border-primary text-center mb-10">our services</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                <div>
+                    <img src="assets/images/service-1.jpg" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                        <h3 class="font-bold text-2xl mb-2">Carpentry Services</h3>
+                        <p class="text-gray-500">
+                            Expert carpentry solutions, including minor repairs, installations, and complete renovations                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/service-2.jpg" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                        <h3 class="font-bold text-2xl mb-2">Wooden Doors and Windows</h3>
+                        <p class="text-gray-500">
+                            Manufacturing and installation of high-quality wooden doors for residential and commercial properties                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/service-3.jfif" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                        <h3 class="font-bold text-2xl mb-2">Wooden Modular Kitchens</h3>
+                        <p class="text-gray-500">
+                            Designing and installing functional and stylish wooden modular kitchens                       
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                <div>
+                    <img src="assets/images/Removing damaged laminate from furniture.jfif" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                        <h3 class="font-bold text-2xl mb-2">Furniture Restoration</h3>
+                        <p class="text-gray-500">
+                            Professional restoration services to bring your old furniture back to life
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/service-5.jfif" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                        <h3 class="font-bold text-2xl mb-2">Custom Cabinetry</h3>
+                        <p class="text-gray-500">
+                            Design and installation of custom wooden cabinets for kitchens, bathrooms, and other spaces                       
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/service-6.jpg" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                        <h3 class="font-bold text-2xl mb-2">Office Furniture</h3>
+                        <p class="text-gray-500">
+                            Durable and stylish wooden desks, chairs, cabinets, and other office essentials
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                <div>
+                    <img src="assets/images/service-8.jpg" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                        <h3 class="font-bold text-2xl mb-2">Custom Wooden Furniture</h3>
+                        <p class="text-gray-500">
+                            Tailor-made furniture pieces designed to fit your specific needs and style preferences                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/service-7.jpg" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                        <h3 class="font-bold text-2xl mb-2">Home Furnishings</h3>
+                        <p class="text-gray-500">
+                            Bespoke wooden furnishings for living rooms, bedrooms, dining areas, and more                      
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/service-9.jfif" alt="">
+                    <div class="text-center bg-slate-50 py-4">
+                         <h3 class="font-bold text-2xl mb-2">Wooden Flooring</h3>
+                        <p class="text-gray-500">
+                            Installation and finishing of elegant and durable wooden floors              
+                       </p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- special services -->
+     <section class="my-20">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold uppercase before:border-l-4 before:me-4 before:border-primary text-center mb-10">our special services</h1>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mb-10">
+                <div>
+                    <img src="assets/images/modular-kitchen.jpeg-1.png" alt="" class="border-8 border-accent/75">
+                </div>
+                <div class="py-12">
+                    <h1 class="text-2xl font-bold before:border-l-4 before:me-4 before:border-accent mb-10">Modular Kitchen</h1>
+                    <p class="leading-8 mb-5">
+                        Get Your Kitchen Have a great look, That Showcases your kitchen amazingly and use the most of the part efficiently :
+                    </p>
+                    <ul class="leading-10">
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            Amazing Quality and looking Design
+                        </li>
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            Best Quality Wood Used for making it last longer
+                        </li>
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            Looks, That are admired by everyone.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mb-10">
+                <div class="py-12">
+                    <h1 class="text-2xl font-bold before:border-l-4 before:me-4 before:border-accent mb-10">Modern Almirah</h1>
+                    <p class="leading-8 mb-5">
+                        The Compact Package that provides you Best in Use Of Your space leading to good design and room decor :
+                    </p>
+                    <ul class="leading-10">
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            High Quality Timber Used
+                        </li>
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            Great Finishing
+                        </li>
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            At Affordabe Prices
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="assets/images/almirah.jpeg" alt="" class="border-8 border-accent/75">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mb-10">
+                <div>
+                    <img src="assets/images/wooden-bed.jpg" alt="" class="border-8 border-accent/75">
+                </div>
+                <div class="py-12">
+                    <h1 class="text-2xl font-bold before:border-l-4 before:me-4 before:border-accent mb-10">Wooden Bed</h1>
+                    <p class="leading-8 mb-5">
+                        After The Stress of the all day, One needs like a beautiful and comfortable rest that’s why we introduce our amazing packages for beds to sleep.                  
+                    </p>
+                    <ul class="leading-10">
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            High Quality Woods
+                        </li>
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            Use The Most Space of yours
+                        </li>
+                        <li>
+                            <i class="far fa-copy me-2 text-accent"></i>
+                            Get it done affordably and amazingly
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mb-10">
+                <div class="py-12">
+                    <h1 class="text-2xl font-bold before:border-l-4 before:me-4 before:border-accent mb-10">More Things We Make</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-0">
+                        <ul class="leading-10">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chevron-right text-xs me-5 me-2 text-accent"></i>
+                                    Tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chevron-right text-xs me-5 me-2 text-accent"></i>
+                                    Sectionals
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chevron-right text-xs me-5 me-2 text-accent"></i>
+                                    Accent Chair
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chevron-right text-xs me-5 me-2 text-accent"></i>
+                                    Coffee Tables
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="leading-10">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chevron-right text-xs me-5 me-2 text-accent"></i>
+                                    Window Panes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chevron-right text-xs me-5 me-2 text-accent"></i>
+                                    Book Shelves
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chevron-right text-xs me-5 me-2 text-accent"></i>
+                                    All Carpentry
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chevron-right text-xs me-5 me-2 text-accent"></i>
+                                    All Woodworkings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/images/sofa.jpg" alt="" class="border-8 border-accent/75">
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <section>
+        <div class="container mx-auto">
+            <div class="md:flex md:justify-between mb-8">
+                <h3 class="text-2xl font-bold">What Our Customer Say About Us</h3>
+                <div class="flex mb-2">
+                    <button class="border px-3 py-2 review-prev-btn bg-primary transition-all duration-500 hover:bg-accent">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="border px-3 py-2 review-next-btn bg-primary transition-all duration-500 hover:bg-accent">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="review rounded-tl-3xl rounded-br-3xl border-4 border-primary-4 border-primary p-5">
+                        <h6 class="text-lg mb-4 font-semibold text-gray-700">Rahul Sangram</h6>
+                    <p class="text-md text-gray-600">
+                       <sup><i class="fas text-primary me-2 fa-quote-left"></i></sup>Ravi ki baatein hamesha dil ko choo jaati hain. Bahut positive insaan hain. Acha dost aur sahi advice dene wala. Unka sense of humor bhi zabardast hai. Kisi bhi group mein jaan daal dete hain.<sup><i class="fas text-primary ms-2 fa-quote-right"></i></sup>
+                    </p>
+                </div>
+                <div class="rounded-tl-3xl rounded-br-3xl review border-4 border-primary p-5">
+                    <h6 class="text-lg mb-4 font-semibold text-gray-700">Pooja Kataria</h6>
+                    <p class="text-md text-gray-600">
+                        <sup><i class="fas text-primary me-2 fa-quote-left"></i></sup>Priya bohot hardworking aur dedicated hain. Apne kaam ko lekar bohot passionate hain. Har kaam ko perfection ke saath karna unki khasiyat hai. Uska friendly nature sabko pasand aata hai. Great team player!<sup><i class="fas text-primary ms-2 fa-quote-right"></i></sup>
+                    </p>
+                </div>
+                <div class="rounded-tl-3xl rounded-br-3xl review border-4 border-primary p-5">
+                    <h6 class="text-lg mb-4 font-semibold text-gray-700">Amit Tiwari</h6>
+                    <p class="text-md text-gray-600">
+                        <sup><i class="fas text-primary me-2 fa-quote-left"></i></sup> Amit ki communication skills kamaal ki hain. Bohot articulate aur confident speaker hai. Uska knowledge bohot vast hai, har topic par insight deta hai. Logon se easily connect kar leta hai. True leader material!<sup><i class="fas text-primary ms-2 fa-quote-right"></i></sup>
+                    </p>
+                </div>
+                <div class="rounded-tl-3xl rounded-br-3xl review border-4 border-primary p-5">
+                    <h6 class="text-lg mb-4 font-semibold text-gray-700">Neha Mathur</h6>
+                    <p class="text-md text-gray-600">
+                        <sup><i class="fas text-primary me-2 fa-quote-left"></i></sup> Neha ka artistic sense lajawab hai. Bohot creative aur innovative ideas laati hain. Event planning aur designing mein uski expertise ka jawab nahi. Positive attitude aur cheerful nature sabko inspire karta hai.<sup><i class="fas text-primary ms-2 fa-quote-right"></i></sup>
+                    </p>
+                </div>
+                <div class="rounded-tl-3xl rounded-br-3xl review border-4 border-primary p-5">
+                    <h6 class="text-lg mb-4 font-semibold text-gray-700">Ramesh Pal</h6>
+                    <p class="text-md text-gray-600">
+                        <sup><i class="fas text-primary me-2 fa-quote-left"></i></sup> Sanjay ki energy levels unmatched hain. Bohot enthusiastic aur motivated rehta hai. Team mein ek positive vibe laata hai. Uski problem-solving skills bhi zabardast hain. Hamesha naye ideas ke saath aata hai.<sup><i class="fas text-primary ms-2 fa-quote-right"></i></sup>
+                    </p>
+                </div>
+                <div class="rounded-tl-3xl rounded-br-3xl review border-4 border-primary p-5">
+                    <h6 class="text-lg mb-4 font-semibold text-gray-700">Sunita Jain</h6>
+                    <p class="text-md text-gray-700">
+                        <sup><i class="fas text-primary me-2 fa-quote-left"></i></sup> Anjali ki empathy aur understanding nature bohot achi hai. Sabko support karti hai, aur ek achi listener hai. Kabhi bhi kisi ko help chahiye, woh hamesha present rehti hai. Bohot caring aur loving person hai.<sup><i class="fas text-primary ms-2 fa-quote-right"></i></sup>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+     <!-- contact us -->
+     <section class="bg-gray-100 py-12">
+        <div class="container mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-primary">Contact Us</h2>
+                <p class="mt-2 text-gray-700">Get in touch with us for your wooden works and furniture needs.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="flex items-center">
+                    <img src="assets/images/contact-us.jpg" alt="Contact Us" class="w-full h-auto object-cover rounded">
+                </div>
+                <div class="bg-white p-10 rounded shadow-lg flex items-center">
+                    <form action="#" method="POST" class="w-full">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone_no" class="block text-gray-700 font-bold mb-2">Your Phone Number</label>
+                            <input type="number" id="phone_no" name="phone_no" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit"
+                                class="inline-block px-6 py-3 bg-primary text-white font-bold uppercase hover:bg-accent transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>        
+        </div>
+     </section>
+    
+
+    <!-- footer -->
+    <footer class="text-white py-3 bg-black">
+        <div class="container mx-auto py-4">
+            <div class="md:flex justify-between text-xs md:text-lg">
+                <p class="tracking-wide">
+                   &copy;  
+                    Copyright Powered by Shiva Furnitures
+                </p>
+                <p>
+                    Made with <i class="fas fa-heart text-red-500"></i> by  <a href="https://spreadmybusiness.in/"
+                    class="transition-all text-white duration-300  hover:text-accent">SpreadMyBusiness</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+</html>
